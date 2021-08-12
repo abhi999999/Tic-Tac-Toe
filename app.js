@@ -58,7 +58,7 @@ function play(){
         element.addEventListener("click", function(){
             // console.log(square.status);
             let id = element.getAttribute("id")
-            if(current === "x" && choiceOne[id].status === null ){
+            if(current === "x" && choiceOne[id].status === null && result.textContent === "" ){
                 let img = document.createElement("img")
                 img.setAttribute("src", `/images/${current}.png`)
                 element.appendChild(img)
@@ -71,7 +71,7 @@ function play(){
                 // if(xArr.length >= 3 ){
                 //     checkWin()
                 // }
-            }else if(current === "o" && choiceOne[id].status === null){
+            }else if(current === "o" && choiceOne[id].status === null && result.textContent === "" ){
                 let img = document.createElement("img")
                 img.setAttribute("src", `/images/${current}.png`)
                 element.appendChild(img)
